@@ -1,14 +1,14 @@
 let s = [];
 let p;
 const boxes = [...document.querySelectorAll('.box')];
-const sound1 = new Audio('/sounds/C5.mp3');
-const sound2 = new Audio('/sounds/E5.mp3');
-const sound3 = new Audio('/sounds/G5.mp3');
-const sound4 = new Audio('/sounds/B5.mp3');
-const wrong1 = new Audio('/sounds/A2.mp3');
-const wrong2 = new Audio('/sounds/G2.mp3');
-const wrong3 = new Audio('/sounds/Db2.mp3');
-const wrong4 = new Audio('/sounds/G1.mp3');
+const sound1 = new Audio('https://levajacm.github.io/sounds/C5.mp3');
+const sound2 = new Audio('https://levajacm.github.io/sounds/E5.mp3');
+const sound3 = new Audio('https://levajacm.github.io/sounds/G5.mp3');
+const sound4 = new Audio('https://levajacm.github.io/sounds/B5.mp3');
+const wrong1 = new Audio('https://levajacm.github.io/sounds/A2.mp3');
+const wrong2 = new Audio('https://levajacm.github.io/sounds/G2.mp3');
+const wrong3 = new Audio('https://levajacm.github.io/sounds/Db2.mp3');
+const wrong4 = new Audio('https://levajacm.github.io/sounds/G1.mp3');
 const box1 = document.querySelector('.box-1');
 const box2 = document.querySelector('.box-2');
 const box3 = document.querySelector('.box-3');
@@ -33,19 +33,15 @@ function init(){
     createSequence(50);
     p = 1;
     title.textContent = `Press A to Start`;
-    console.log(s);
-    
     box1.addEventListener('mousedown',function(){
         box1.classList.add('clicked')
         sound1.load();
         sound1.play();
         if(curr[0]===1){
             curr.shift();
-            console.log(curr);
             if(curr.length<1){
                 title.textContent = `Correct!!!`
                 p+=1
-                console.log(p);
                 setTimeout(()=>{
                     start();
                 },800);
@@ -60,11 +56,9 @@ function init(){
         sound2.play()
         if(curr[0]===2){
             curr.shift();
-            console.log(curr);
             if(curr.length<1){
                 title.textContent = `Correct!!!`
                 p+=1
-                console.log(p);
                 setTimeout(()=>{
                     start();
                 },800);
@@ -79,11 +73,9 @@ function init(){
         sound3.play()
         if(curr[0]===3){
             curr.shift();
-            console.log(curr);
             if(curr.length<1){
                 title.textContent = `Correct!!!`
                 p+=1
-                console.log(p);
                 setTimeout(()=>{
                     start();
                 },800);
@@ -100,11 +92,9 @@ function init(){
         sound4.play()
         if(curr[0]===4){
             curr.shift();
-            console.log(curr);
             if(curr.length<1){
                 title.textContent = `Correct!!!`
                 p+=1
-                console.log(p);
                 setTimeout(()=>{
                     start();
                 },800);
@@ -213,7 +203,6 @@ async function playSound(n){
 }
 
 document.addEventListener('keyup', (e)=>{
-    console.log(e);
     
     if(e.key === 'a'){
         start();
