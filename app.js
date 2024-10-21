@@ -1,14 +1,14 @@
 let s = [];
 let p;
-const boxes = [...document.querySelectorAll('.box')];
-const sound1 = new Audio('https://github.com/LevajacM/simon/blob/master/sounds/C5.mp3');
-const sound2 = new Audio('https://github.com/LevajacM/simon/blob/master/sounds/E5.mp3');
-const sound3 = new Audio('https://github.com/LevajacM/simon/blob/master/sounds/G5.mp3');
-const sound4 = new Audio('https://github.com/LevajacM/simon/blob/master/sounds/B5.mp3');
-const wrong1 = new Audio('https://github.com/LevajacM/simon/blob/master/sounds/A2.mp3');
-const wrong2 = new Audio('https://github.com/LevajacM/simon/blob/master/sounds/G2.mp3');
-const wrong3 = new Audio('https://github.com/LevajacM/simon/blob/master/sounds/Db2.mp3');
-const wrong4 = new Audio('https://github.com/LevajacM/simon/blob/master/sounds/G1.mp3');
+
+const sound1 = new Audio('/sounds/C5.mp3');
+const sound2 = new Audio('/sounds/E5.mp3');
+const sound3 = new Audio('/sounds/G5.mp3');
+const sound4 = new Audio('/sounds/B5.mp3');
+const wrong1 = new Audio('/sounds/A2.mp3');
+const wrong2 = new Audio('/sounds/G2.mp3');
+const wrong3 = new Audio('/sounds/Db2.mp3');
+const wrong4 = new Audio('/sounds/G1.mp3');
 const box1 = document.querySelector('.box-1');
 const box2 = document.querySelector('.box-2');
 const box3 = document.querySelector('.box-3');
